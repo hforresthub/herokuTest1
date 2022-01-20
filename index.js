@@ -3,6 +3,15 @@ const express = require('express')
 const path = require('path')
 const PORT = process.env.PORT || 5000
 
+showTimes = () => {
+	let result = ''
+	const times = process.env.TIMES || 5
+	for (i = 0; i < times; i++) {
+		result += i + ' '
+	}
+	return result
+}
+
 express()
 	.use(express.static(path.join(__dirname, 'public')))
 	.set('views', path.join(__dirname, 'views'))
@@ -12,4 +21,5 @@ express()
 		res.send(cool())
 		// console.log(cool())
 	})
+	.get('/times', (req, res) => res.send(showTimes()))
 	.listen(PORT, () => console.log(`Listening on ${PORT}`))
