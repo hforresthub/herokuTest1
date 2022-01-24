@@ -23,7 +23,7 @@ express()
 		// console.log(cool())
 	})
 	.get('/textspeech', (req, res) => {
-		// res.send(say.speak('testing'))
+		res.send(say.speak('testing'))
 		// console.log(cool())
 	})
 	.get('/times', (req, res) => res.send(showTimes()))
