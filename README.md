@@ -1,6 +1,6 @@
 # Testing
 
-boilerplate from heroku
+boilerplate from heroku, testing out api related mechanics
 
 # node-js-getting-started
 
