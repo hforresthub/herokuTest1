@@ -6,6 +6,7 @@ const say = require('say')
 const xml2js = require('xml2js')
 const fs = require('fs')
 const parser = new xml2js.Parser({ attrkey: "ATTR"})
+const cors = require('cors')
 
 showTimes = () => {
 	let result = ''
@@ -34,6 +35,7 @@ const xmlReading = () => {
 }
 
 express()
+	.use(cors())
 	.use(express.static(path.join(__dirname, 'public')))
 	.set('views', path.join(__dirname, 'views'))
 	.set('view engine', 'ejs')
