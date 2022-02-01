@@ -1,6 +1,17 @@
 body {
 	background-color: burlywood;
+	width: auto;
+	display: flex;
+	flex-direction: column;
 }
 div {
 	border: 1px solid brown;
+	display: flex;
+	flex-direction: column;
+}
+.troop {
+	flex-direction: row;
+}
+.item {
+	flex-direction: column;
 }

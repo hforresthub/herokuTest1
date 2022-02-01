@@ -15,13 +15,14 @@ const loadAPI = () => {
 	dataObj.NPCCharacters.NPCCharacter.forEach((element) => {
 		// console.log(element)
 		const newEl = document.createElement('div')
+		newEl.classList.add('troop')
 		newEl.innerHTML = `<h3>Troop name: ${element.ATTR.id}</h3>
 			<p>Troop type: ${element.ATTR.default_group} </p>`
 		if (element.Equipments[0].EquipmentRoster[0].equipment) {
 
 			element.Equipments[0].EquipmentRoster[0].equipment.forEach((item) => {
 				const newItemEl = document.createElement('div')
-				newItemEl.innerHTML = `<p>Item name: ${item.ATTR.id}</p>`
+				newItemEl.innerHTML = `<div class='item'>Item name: ${item.ATTR.id}</div>`
 				newEl.appendChild(newItemEl)
 			})
 			containerEl.appendChild(newEl)
