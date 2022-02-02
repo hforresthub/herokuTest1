@@ -3,7 +3,7 @@ const xhttp = new XMLHttpRequest()
 console.log('test test')
 
 const loadAPI = () => {
-	xhttp.open('GET', 'http://api-test-bannerlord.herokuapp.com/xmlreader', false)
+	xhttp.open('GET', 'http://api-test-bannerlord.herokuapp.com/xmlreader?apikey=abcdef', false)
 	xhttp.send()
 
 	const dataObj = JSON.parse(xhttp.responseText)
