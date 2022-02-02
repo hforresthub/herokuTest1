@@ -1,9 +1,12 @@
 const xhttp = new XMLHttpRequest()
 
+const urlTest = 'http://localhost:5000/xmlreader?apikey=abcde'
+// const urlTest = 'http://api-test-bannerlord.herokuapp.com/xmlreader?apikey=abcdef'
+
 console.log('test test')
 
 const loadAPI = () => {
-	xhttp.open('GET', 'http://api-test-bannerlord.herokuapp.com/xmlreader?apikey=abcdef', false)
+	xhttp.open('GET', urlTest, false)
 	xhttp.send()
 
 	const dataObj = JSON.parse(xhttp.responseText)

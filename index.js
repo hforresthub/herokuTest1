@@ -49,7 +49,13 @@ express()
 		// console.log(cool())
 	})
 	.get('/xmlreader', (req, res) => {
-		res.send(xmlReading())
+		const apikey = req.query.apikey
+		if (apikey === 'abcdef') {
+			res.send(xmlReading())
+		}
+		else {
+			console.log('received incorrect key')
+		}
 	})
 	.get('/times', (req, res) => res.send(showTimes()))
 	.listen(PORT, () => console.log(`Listening on ${PORT}`))
